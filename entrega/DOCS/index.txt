@@ -1,0 +1,4 @@
+Directori DOCS:
+
+	- classes.txt: relacio classes per membre grup
+	- manualUsuari.pdf: Manual d'usuari del sistema recomanador.
