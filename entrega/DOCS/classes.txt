@@ -1,0 +1,57 @@
+Llista de Classes implementades:
+
+Capa de Domini:
+
+	- Algorithm: Abdelali El Attar Yalaoui
+	- Attribute: Abdelali El Attar Yalaoui
+	- SetAttributes: Miguel Garcia Soler
+	- BooleanAttribute: Miguel Garcia Soler
+	- DoubleAttribute: Abdelali El Attar Yalaoui
+	- IntegerAttribute: Sergi Casau Pueyo
+	- StringAttribute: Sergi Casau Pueyo
+	- SetAttribute: Sergi Casau Pueyo
+	- Value: Sergi Casau Pueyo
+	- BooleanValue: Abdelali El Attar Yalaoui
+	- DoubleValue: Abdelali El Attar Yalaoui
+	- IntegerValue: Abdelali El Attar Yalaoui
+	- StringValue: Abdelali El Attar Yalaoui
+	- SetValue: Miguel Garcia Soler
+	- Collaborative Filtering: Miguel Garcia Soler
+	- KMeans: Miguel Garcia Soler
+	- Dataset: Miguel Garcia Soler
+	- Distance: Miguel Garcia Soler
+	- SlopeOne: Ricard Guixaro Trancho
+	- Content Based: Sergi Casau Pueyo
+	- Hybrid Approaches: Miguel Garcia Soler
+	- Item: Ricard Guixaro Trancho
+	- SetItems: Ricard Guixaro Trancho
+	- User: Ricard Guixaro Trancho
+	- UserGroup: Ricard Guixaro Trancho
+	- SetUserGroups: Miguel Garcia Soler
+	- Quality: Ricard Guixaro Trancho
+	- Rating: Sergi Casau Pueyo
+	- SetRatings: Sergi Casau Pueyo
+	- Statistics: Sergi Casau Pueyo
+	- Recommendation: Abdelali El Attar Yalaoui
+	- CtrlDomain: Ricard Guixaro Trancho
+	- CtrlDomainUser: Miguel Garcia Soler
+	
+Capa de Presentacio:
+
+	- CtrlPresentation: Ricard Guixaro Trancho
+	- main: Sergi Casau Pueyo
+	- ItemController: Miguel Garcia Soler
+	- ViewImportCtrl: Ricard Guixaro Trancho
+	- ViewItemsCtrl: Ricard Guixaro Trancho
+	- ViewLoginCtrl: Ricard Guixaro Trancho
+	- View Main Menu Ctrl: Ricard Guixaro Trancho
+	- ViewSignUpCtrl: Ricard Guixaro Trancho
+	- Launcher: Ricard Guixaro Trancho
+	
+Capa de Persistencia:
+
+	- CtrlPersistence: Ricard Guixaro Trancho
+
+Utils:
+
+	- Pair: Ricard Guixaro Trancho

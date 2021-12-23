@@ -1,0 +1,263 @@
+.top-light {
+    -fx-background-color: #A0A0A0;
+}
+.top-dark {
+    -fx-background-color: #303030;
+}
+
+.config-light .label {
+    -fx-text-fill: BLACK;
+}
+.config-dark .label {
+    -fx-text-fill: WHITE;
+}
+
+.combo-box .cell:selected {
+    -fx-text-fill: black;
+}
+.combo-box .text {
+    -fx-prompt-text-fill: red;
+    -fx-font-size: 14px;
+}
+
+.hbox-right-dark {
+    -fx-background-color: #404040;
+}
+.hbox-right-light {
+    -fx-background-color: #C2C2C2;
+}
+
+.aux-label-dark .label {
+    -fx-text-fill: WHITE;
+}
+
+.aux-label-light .label {
+    -fx-text-fill: BLACK;
+}
+
+.center-light {
+    -fx-background-color: #F5F5F5;
+}
+.center-dark {
+    -fx-background-color: #5C5C5C;
+}
+
+.pages-light .label {
+    -fx-text-fill: BLACK;
+}
+.pages-light: hover {
+    -fx-background-color: #E4E4E4;
+}
+.pages-dark .label {
+    -fx-text-fill: WHITE;
+}
+.pages-dark: hover {
+    -fx-background-color: #828282;
+}
+
+.item-view-light {
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius: 5;
+}
+
+.item-view-dark {
+    -fx-background-color: #404040;
+    -fx-background-radius: 5;
+}
+
+.leftright-light {
+    -fx-background-color: WHITE;
+}
+
+.leftright-dark {
+    -fx-background-color: #404040;
+}
+
+.scroll-pane {
+    -fx-background-color:transparent;
+}
+
+.pane-login {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-color: #A0A0A0;
+    -fx-border-radius: 10;
+}
+.pane-login:hover {
+    -fx-background-color: #D3D3D3;
+}
+.pane-login:focused {
+    -fx-background-color: #D3D3D3;
+}
+.button-box-light {
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius:  0 10 0 0;
+    -fx-background-color: #E9E9E9;
+    -fx-background-radius: 10;
+    -fx-text-fill: BLxACK;
+}
+.button-box-dark {
+    -fx-border-color: white;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius:  0 10 0 0;
+    -fx-background-color: #404040;
+    -fx-background-radius: 10;
+    -fx-text-fill: WHITE;
+}
+
+.transparent {
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.btn-light {
+    -fx-background-color: #828282;
+    -fx-background-radius: 7;
+}
+.btn-light:hover {
+    -fx-background-color: #A0A0A0;
+    -fx-background-radius: 7;
+    -fx-border-color: WHITE;
+    -fx-border-radius: 7;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+.btn-dark {
+    -fx-background-color: #303030;
+    -fx-background-radius: 7;
+}
+.btn-dark:hover {
+    -fx-background-color: #5C5C5C;
+    -fx-background-radius: 7;
+    -fx-border-color: WHITE;
+    -fx-border-radius: 7;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+
+.btn-settings-light {
+    -fx-background-color: #828282;
+    -fx-background-radius: 7;
+}
+.btn-settings-light:hover {
+    -fx-background-color: #8F8F8F;
+    -fx-background-radius: 7;
+    -fx-border-color: WHITE;
+    -fx-border-radius: 7;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+.btn-settings-dark {
+    -fx-background-color: #404040;
+    -fx-background-radius: 7;
+}
+.btn-settings-dark:hover {
+    -fx-background-color: #4F4F4F;
+    -fx-background-radius: 7;
+    -fx-border-color: WHITE;
+    -fx-border-radius: 7;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+.button-config:hover {
+    -fx-background-color: #828282;
+}
+
+.listview .list-cell:even {
+    -fx-background-color: #828282;
+    -fx-text-fill: WHITE;
+}
+.listview .list-cell:odd {
+    -fx-background-color: #A0A0A0;
+    -fx-text-fill: WHITE;
+}
+
+.button-save-light {
+    -fx-background-color: WHITE;
+    -fx-background-radius: 4 4 0 0;
+    -fx-border-color: #1ED760;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+.button-save-dark {
+    -fx-background-color: #404040;
+    -fx-background-radius: 4 4 0 0;
+    -fx-border-color: #1ED760;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+.button-save2-light {
+    -fx-background-color: #F5F5F5;
+    -fx-background-radius: 4 4 0 0;
+    -fx-border-color: #1ED760;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+.button-save2-dark {
+    -fx-background-color: #5C5C5C;
+    -fx-background-radius: 4 4 0 0;
+    -fx-border-color: #1ED760;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+.button-cancel {
+    -fx-background-color: #404040;
+    -fx-background-radius: 4 4 0 0;
+    -fx-border-color: #d02121;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+
+.buttonDeleteAccount {
+    -fx-background-color: #D02121;
+    -fx-background-radius: 5;
+    -fx-border-color: #d02121;
+    -fx-border-radius: 5;
+    -fx-border-width: 2;
+}
+
+.buttonDeleteAccount:hover {
+    -fx-background-color: #828282;
+}
+
+.buttonLogIn {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5;
+    -fx-border-color: #828282;
+    -fx-border-radius: 5;
+}
+.buttonLogIn:hover {
+    -fx-border-color: #1ED760;
+}
+.buttonLogIn:focused {
+    -fx-border-color: #1ED760;
+}
+
+.buttonSearch {
+    -fx-background-color: #828282;
+    -fx-background-radius: 10;
+}
+
+.shadow {
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 0.0, 10.0);
+}
+
+.buttonAlgorithm-light {
+    -fx-background-color: #828282;
+    -fx-background-radius: 10;
+    -fx-text-fill: WHITE;
+}
+.buttonAlgorithm-dark {
+    -fx-background-color: #303030;
+    -fx-background-radius: 10;
+    -fx-text-fill: WHITE;
+}
+
+.buttonCollaborativeHover:hover {
+    -fx-border-color: #4175BA;
+    -fx-border-radius: 10;
+    -fx-border-width: 0px 0px 2px 0px;
+
+}
+.buttonContentBasedHover:hover {
+    -fx-border-color: #1ED760;
+    -fx-border-radius: 10;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+.buttonHybridHover:hover {
+    -fx-border-color: #FED800;
+    -fx-border-radius: 10;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+

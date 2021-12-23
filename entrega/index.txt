@@ -1,0 +1,7 @@
+Directori Arrel:
+
+	- /DOCS: Cont la documentacio del projecte realitzat.
+	- /FONTS: Conte el codi font de l'aplicació.
+	- /EXE: Conte el JAR executable per a macOS i Linux.
+
+	- descripcio.txt: Conte la informacio del grup, membres, etc...

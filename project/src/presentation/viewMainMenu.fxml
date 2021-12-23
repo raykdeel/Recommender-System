@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.ToggleSwitch?>
+
+<AnchorPane fx:id="main" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.viewMainMenuCtrl">
+   <children>
+      <BorderPane layoutY="-8.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox fx:id="vBoxLeft" prefHeight="200.0" prefWidth="200.0" spacing="15.0" styleClass="leftright-light" stylesheets="@../resources/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxRecommendations" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="pages-light" stylesheets="@../resources/style.css">
+                     <children>
+                        <Label prefHeight="49.0" prefWidth="231.0" text="Recommendations">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="hboxItems" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="pages-light" stylesheets="@../resources/style.css">
+                     <children>
+                        <Label fx:id="labelItems" prefHeight="63.0" prefWidth="200.0" text="Rate Items">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxData" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="15.0" styleClass="pages-light" stylesheets="@../resources/style.css" visible="false">
+                     <children>
+                        <Label prefHeight="49.0" prefWidth="233.0" text="Manage Data">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                  </HBox>
+                  <Button fx:id="btnLogout" alignment="CENTER" mnemonicParsing="false" onAction="#btnLogoutClicked" prefHeight="45.0" prefWidth="141.0" stylesheets="@../resources/style.css" text="Logout">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="btnLogoutImg" fitHeight="76.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/back_black.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="300.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="transparent" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <VBox fx:id="vBoxRight" prefHeight="200.0" prefWidth="150.0" styleClass="center-light" stylesheets="@../resources/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="slider" prefHeight="400.0" prefWidth="200.0" styleClass="leftright-light" stylesheets="@../resources/style.css">
+                     <children>
+                        <VBox fx:id="vBoxConfig" prefHeight="400.0" prefWidth="222.0" stylesheets="@../resources/style.css">
+                           <children>
+                              <Separator prefWidth="200.0" />
+                              <HBox alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="labelMode" text="Dark mode">
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ToggleSwitch fx:id="switchMode" alignment="CENTER" onMousePressed="#switchMode">
+                                       <HBox.margin>
+                                          <Insets right="20.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ToggleSwitch>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="labelChangeUsername" prefHeight="30.0" prefWidth="152.0" text="Change Username">
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="tfNewUsername" prefHeight="30.0" prefWidth="160.0" promptText="new username" style="-fx-background-color: #ffffff;" styleClass="shadow">
+                                 <stylesheets>
+                                    <URL value="@../resources/style.css" />
+                                    <URL value="@../resources/style.css" />
+                                 </stylesheets>
+                                 <VBox.margin>
+                                    <Insets left="25.0" right="25.0" top="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Calibri" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <HBox prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="labelConfigSetUsername" prefHeight="30.0" prefWidth="125.0" text="Updated successfully" textFill="#5e5757" visible="false">
+                                       <font>
+                                          <Font name="Calibri Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="25.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Button fx:id="btnConfigSetUsername" mnemonicParsing="false" onAction="#btnConfigSetUsernameClicked" prefHeight="30.0" prefWidth="60.0" stylesheets="@../resources/style.css" text="Set">
+                                       <font>
+                                          <Font name="Calibri Bold" size="12.0" />
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-config" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="button-save-light" />
+                                       </styleClass>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label fx:id="labelChangePwd" prefHeight="30.0" prefWidth="152.0" text="Change Password">
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <PasswordField fx:id="pfNewPwd1" minWidth="160.0" prefHeight="30.0" prefWidth="160.0" promptText="new password" style="-fx-background-color: #ffffff;" styleClass="shadow" stylesheets="@../resources/style.css">
+                                 <VBox.margin>
+                                    <Insets left="25.0" right="25.0" top="15.0" />
+                                 </VBox.margin>
+                              </PasswordField>
+                              <PasswordField fx:id="pfNewPwd2" prefHeight="30.0" prefWidth="160.0" promptText="new password" style="-fx-background-color: #ffffff;" styleClass="shadow" stylesheets="@../resources/style.css">
+                                 <VBox.margin>
+                                    <Insets left="25.0" right="25.0" top="10.0" />
+                                 </VBox.margin>
+                              </PasswordField>
+                              <HBox prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="labelConfigSetPassword" prefHeight="30.0" prefWidth="125.0" text="Updated successfully" textFill="#5e5757" visible="false">
+                                       <font>
+                                          <Font name="Calibri Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="25.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Button fx:id="btnConfigSetPassword" mnemonicParsing="false" onAction="#btnConfigSetPasswordClicked" prefHeight="30.0" prefWidth="60.0" stylesheets="@../resources/style.css" text="Set">
+                                       <font>
+                                          <Font name="Calibri Bold" size="12.0" />
+                                       </font>
+                                       <styleClass>
+                                          <String fx:value="button-config" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="button-save-light" />
+                                       </styleClass>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Button mnemonicParsing="false" onAction="#btnDeleteAccountClicked" prefHeight="35.0" prefWidth="107.0" stylesheets="@../resources/style.css" text="Delete Account" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Bold" size="12.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="buttonDeleteAccount" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <VBox.margin>
+                                    <Insets left="100.0" right="15.0" top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#303030" height="200.0" layoutX="-2.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="4.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <Button fx:id="btnSaveAll" alignment="CENTER" ellipsisString="" mnemonicParsing="false" onAction="#btnSaveAllClicked" prefHeight="45.0" prefWidth="141.0" stylesheets="@../resources/style.css" text="Save All">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="button-config" />
+                        <String fx:value="button-save2-light" />
+                     </styleClass>
+                     <VBox.margin>
+                        <Insets left="41.0" top="125.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </right>
+         <top>
+            <HBox fx:id="top" prefHeight="100.0" prefWidth="200.0" styleClass="leftright-light" stylesheets="@../resources/style.css" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <HBox fx:id="topIcon" prefHeight="100.0" prefWidth="198.0" styleClass="leftright-light" stylesheets="@../resources/style.css">
+                     <children>
+                        <ImageView fx:id="icon" fitHeight="57.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/recommenderLogo_dark.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="10.0" top="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <Label fx:id="tabTitle" prefHeight="32.0" prefWidth="240.0" text="RECOMMENDATIONS">
+                     <font>
+                        <Font name="Calibri Bold" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" top="38.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="btnSettings" alignment="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="125.0" stylesheets="@../resources/style.css" text="Settings" textFill="WHITE" translateX="75.0">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="250.0" right="25.0" top="30.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="btn-settings-light" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnSettingsClose" alignment="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="125.0" stylesheets="@../resources/style.css" text="Settings" textFill="WHITE" translateX="-75.0" visible="false">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="btn-settings-light" />
+                     </styleClass>
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox fx:id="vBoxCenter" prefHeight="200.0" prefWidth="100.0" styleClass="center-light" stylesheets="@../resources/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="250.0" prefWidth="576.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="576.0" text="The available recommendation algorithms are the following.">
+                           <VBox.margin>
+                              <Insets left="25.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Calibri" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="hBoxAlgorithms" alignment="CENTER_LEFT" minHeight="45.0" prefHeight="50.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets left="50.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <Button fx:id="btnCollaborative" onAction="#recommendationClicked" mnemonicParsing="false" prefHeight="45.0" prefWidth="130.0" stylesheets="@../resources/style.css" text="Collaborative">
+                                 <font>
+                                    <Font name="Calibri Bold" size="14.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="buttonAlgorithm-light" />
+                                    <String fx:value="buttonCollaborativeHover" />
+                                 </styleClass>
+                              </Button>
+                              <Label prefHeight="50.0" prefWidth="370.0" text="Predicts the items that you will like most based on preferences from many users." wrapText="true">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Calibri" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btnContentBased" mnemonicParsing="false" onAction="#recommendationClicked" prefHeight="45.0" prefWidth="130.0" stylesheets="@../resources/style.css" text="Content Based">
+                                 <font>
+                                    <Font name="Calibri Bold" size="14.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="buttonAlgorithm-light" />
+                                    <String fx:value="buttonContentBasedHover" />
+                                 </styleClass>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                              <Label prefHeight="45.0" prefWidth="370.0" text="Recommends similar items to those that you like.">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Calibri" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="50.0" top="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btnHybrid" onAction="#recommendationClicked" mnemonicParsing="false" prefHeight="45.0" prefWidth="130.0" stylesheets="@../resources/style.css" text="Hybrid">
+                                 <font>
+                                    <Font name="Calibri Bold" size="14.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="buttonAlgorithm-light" />
+                                    <String fx:value="buttonHybridHover" />
+                                 </styleClass>
+                              </Button>
+                              <Label prefHeight="45.0" prefWidth="370.0" text="Mix of the two previous methods.">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Calibri" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="50.0" top="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" minHeight="25.0" prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="tabSubtitle" prefHeight="35.0" prefWidth="285.0" text="Recommended for you">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="25.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="25.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Button fx:id="btnQuality" alignment="CENTER" mnemonicParsing="false" onAction="#btnQualityClicked" prefHeight="35.0" prefWidth="108.0" stylesheets="@../resources/style.css" text="Quality" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="14.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="btn-settings-light" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Label fx:id="labelQuality" prefHeight="35.0" prefWidth="134.0">
+                           <font>
+                              <Font name="Calibri Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="25.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ScrollPane fx:id="scrollpaneRecommended" prefHeight="200.0" prefWidth="551.0" stylesheets="@../resources/style.css" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="10.0" top="5.0" />
+                     </VBox.margin>
+                     <content>
+                        <GridPane fx:id="itemContainer" hgap="10.0" prefHeight="0.0" prefWidth="0.0" styleClass="transparent" stylesheets="@../resources/style.css" vgap="10.0">
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

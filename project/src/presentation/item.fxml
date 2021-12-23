@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="150.0" style="-fx-background-color: WHITE;" stylesheets="@../resources/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.ItemController">
+   <children>
+      <ImageView fx:id="itemImage" fitHeight="140.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </ImageView>
+      <VBox prefHeight="100.0" prefWidth="100.0">
+         <children>
+            <Label fx:id="itemName" prefHeight="35.0" prefWidth="120.0" text="Label">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <ImageView fx:id="itemRating" fitHeight="30.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+               <image>
+                  <Image url="@../resources/5stars.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="20.0" top="5.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <styleClass>
+      <String fx:value="shadow" />
+      <String fx:value="leftright-light" />
+   </styleClass>
+</VBox>

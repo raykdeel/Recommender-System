@@ -1,0 +1,8 @@
+Directori EXE:
+
+	- items.csv: fitxer de la base de dades que emmagatzema els items.
+	- ratings.db.csv: fitxer de la base de dades que emmagatzema els ratings dels usuaris.
+	- ratings.test.known.csv: fitxer de la base de dades que emmagatzema els ratings que han fet un conjunt d'usuaris.
+	- ratings.test.unknown.csv: fitxer de la base de dades que emmagatzema els ratings que s'espera que facin un d'usuaris.
+	- recommender.jar: executable del programa.
+	- Explicació.txt: Explicacio de quina base de dades usar i perque.

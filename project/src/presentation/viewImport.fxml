@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.viewImportCtrl">
+   <children>
+      <VBox layoutX="86.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="58.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/recommenderLogo_dark.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="25.0" top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label text="Import Database">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="350.0" text="Select the folder from where data will be imported" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btnAux" alignment="CENTER" mnemonicParsing="false" onAction="#btnImportClicked" prefHeight="45.0" prefWidth="151.0" stylesheets="@../resources/style.css" text="Select the folder" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="76.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/load.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="btn-light" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets left="125.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Label text="Configure Database">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="350.0" text="What type of item will be recommended?" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" />
+               </VBox.margin>
+            </Label>
+            <Pane prefHeight="50.0" prefWidth="100.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" styleClass="button-box-light" stylesheets="@../resources/style.css">
+               <children>
+                  <TextField fx:id="tfItemType" layoutX="12.0" layoutY="12.0" promptText="i. e. books" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-prompt-text-fill: black;">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font></TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </Pane>
+            <Label prefHeight="50.0" prefWidth="350.0" text="Finally, select which attribute names the items?" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <HBox fx:id="boxItemName" alignment="CENTER" minHeight="40.0" prefHeight="45.0" prefWidth="200.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@../resources/style.css">
+               <children>
+                  <ComboBox fx:id="comboBoxName" prefHeight="45.0" prefWidth="200.0" promptText="i.e. title" style="-fx-prompt-text-fill: black;" stylesheets="@../resources/style.css">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="transparent" />
+                        <String fx:value="shadow" />
+                        <String fx:value="combo-box" />
+                     </styleClass>
+                  </ComboBox>
+               </children>
+               <styleClass>
+                  <String fx:value="button-box-light" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </HBox>
+            <Button id="btnDone" fx:id="btnDone" mnemonicParsing="false" onAction="#btnDoneClicked" prefHeight="36.0" prefWidth="125.0" style="-fx-text-fill: BLACK;" stylesheets="@../resources/style.css" text="DONE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="137.0" right="137.0" top="25.0" />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="buttonLogIn" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </Button>
+            <Button fx:id="btnBack" alignment="CENTER" mnemonicParsing="false" onAction="#btnBackClicked" prefHeight="45.0" prefWidth="141.0" style="-fx-text-fill: BLACK;" stylesheets="@../resources/style.css" text="Return" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="76.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/back_black.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="transparent" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+
+</AnchorPane>
